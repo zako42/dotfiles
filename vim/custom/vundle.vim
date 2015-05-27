@@ -38,7 +38,7 @@ Plugin 'vim-scripts/align'
 Plugin 'kien/ctrlp.vim'
 Plugin 'slim-template/vim-slim'
 Plugin 'scrooloose/nerdtree'
-Plugin 'mhinz/vim-startify'
+" Plugin 'mhinz/vim-startify'
 Plugin 'airblade/vim-gitgutter'
 
 " All of your Plugins must be added before the following line
