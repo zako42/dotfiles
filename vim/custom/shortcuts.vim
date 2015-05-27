@@ -35,8 +35,8 @@ nmap <C-K> <C-W>k
 nmap <S-H> gT
 nmap <S-L> gt
 " buffer nav similar to tabs
-nmap <C-H> :bp
-nmap <C-L> :bn
+nmap <C-H> :bp<CR>
+nmap <C-L> :bn<CR>
 
 " current window split bigger
 nmap <C-=> <ESC>:res +1
