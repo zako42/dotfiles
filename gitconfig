@@ -19,6 +19,7 @@
   editor = vim
   ff = only
   fileMode = false
+  excludesfile = ~/.gitexcludes
 [color "status"]
   added = yellow
   changed = green
