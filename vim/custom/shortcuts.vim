@@ -9,16 +9,19 @@ map <silent> w <Plug>CamelCaseMotion_w
 map <silent> b <Plug>CamelCaseMotion_b
 map <silent> e <Plug>CamelCaseMotion_e
 
+" close window with q
 map <silent> ;q :q<CR>
 map <silent> ;Q :q!<CR>
 map <silent> ;bd :bd<CR>
 map <silent> ;ls :ls<CR>
 
+" nerd tree
 map <leader>d :execute 'NERDTreeFind'<CR>
-map <leader>tl :execute 'TlistToggle'<CR>
-map <leader>pb :CtrlPBuffer<CR>
-map <leader>pr :CtrlPMRU<CR>
-map <leader>pp :CtrlPMixed<CR>
+
+" CtrlP various search modes: open buffers, current dir, recent files
+nmap <leader>pb :CtrlPBuffer<CR>
+nmap <leader>pp :CtrlPMixed<CR>
+nmap <leader>pr :CtrlPMRU<CR>
 
 " relative and absolute rulers
 nmap <leader>rn :set rnu<CR>
@@ -29,17 +32,18 @@ nmap <C-J> <C-W>j
 nmap <C-K> <C-W>k
 nmap <C-L> <C-W>l
 nmap <C-H> <C-W>h
-nmap <C-K> <C-W>k
 
 " tabbed navigation with shift
 nmap <S-H> gT
 nmap <S-L> gt
-" buffer nav similar to tabs
+" buffer navigation with ctrl 
 nmap <C-H> :bp<CR>
 nmap <C-L> :bn<CR>
 
 " current window split bigger
 nmap <C-=> <ESC>:res +1
+
+nnoremap <F5> :buffers<CR>:buffer<Space>
 
 " map global search replace
 nmap S :%s//g<LEFT><LEFT>
@@ -50,5 +54,5 @@ nmap <F2> :mksession! ~/.vim_session <CR> " Quick write session with F2
 nmap <F3> :source ~/.vim_session <CR> " And load session with F3
 
 " other shortcuts
-nnoremap zz za
 inoremap kj <ESC>
+nnoremap zz za

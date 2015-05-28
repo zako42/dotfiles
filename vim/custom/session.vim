@@ -1,5 +1,5 @@
 " Tell vim to remember certain things when we exit
-set viminfo='10,\"100,:20,%,n~/.viminfo
+set viminfo='10,\"100,:20,%,n$HOME/.viminfo
 "            |    |    |  | |
 "            marks will be remembered for up to 10 previously edited files
 "                 |    |  | |

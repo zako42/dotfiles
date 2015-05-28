@@ -14,9 +14,11 @@
   new = green bold
   whitespace = red reverse
 [core]
-  whitespace=fix,-indent-with-non-tab,trailing-space,cr-at-eol
+  whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
   quotepath = false
   editor = vim
+  ff = only
+  fileMode = false
 [color "status"]
   added = yellow
   changed = green
@@ -33,15 +35,18 @@
   lolauth = log --graph --decorate --pretty=short --abbrev-commit
   lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
   lolaauth = log --graph --decorate --pretty=short --abbrev-commit --all
-  mg = merge --no-commit --no-ff
+  mg = merge --no-ff
+  tags = tag --list
   unstage = reset HEAD
   up = pull --rebase
   ignore = update-index --assume-unchanged
   unignore = update-index --no-assume-unchanged
   ignored = !git ls-files -v | grep "^[[:lower:]]"
+[merge]
+  tool = vimdiff
 [mergetool]
 	keepBackup = false
 [rerere]
   enabled = 0
 [branch]
-	autosetupmerge = true
+  autosetupmerge = true

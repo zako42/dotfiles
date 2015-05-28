@@ -8,6 +8,7 @@ source $HOME/.vim/custom/rails.vim
 source $HOME/.vim/custom/session.vim
 source $HOME/.vim/custom/shortcuts.vim
 source $HOME/.vim/custom/visual.vim
+
 set clipboard=unnamedplus
 inoremap kj <Esc>
 
