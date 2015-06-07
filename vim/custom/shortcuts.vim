@@ -34,11 +34,11 @@ nmap <C-L> <C-W>l
 nmap <C-H> <C-W>h
 
 " tabbed navigation with shift
-nmap <S-H> gT
-nmap <S-L> gt
+nmap <C-H> gT
+nmap <C-L> gt
 " buffer navigation with ctrl 
-nmap <C-H> :bp<CR>
-nmap <C-L> :bn<CR>
+nmap <S-H> :bp<CR>
+nmap <S-L> :bn<CR>
 
 " current window split bigger
 nmap <C-=> <ESC>:res +1
