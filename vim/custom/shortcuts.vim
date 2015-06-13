@@ -33,10 +33,10 @@ nmap <C-K> <C-W>k
 nmap <C-L> <C-W>l
 nmap <C-H> <C-W>h
 
-" tabbed navigation with shift
+" tabbed navigation with ctrl
 nmap <C-H> gT
 nmap <C-L> gt
-" buffer navigation with ctrl 
+" buffer navigation with shift
 nmap <S-H> :bp<CR>
 nmap <S-L> :bn<CR>
 
