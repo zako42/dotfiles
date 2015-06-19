@@ -1,0 +1,10 @@
+# rails projects
+gems.tags
+log/**
+db/migrate/**
+tmp/**
+
+# for unity projects
+*.sln
+*.userprefs
+*.csproj
