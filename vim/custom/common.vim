@@ -19,7 +19,7 @@ set splitright
 autocmd! bufwritepost .vimrc source ~/.vimrc    " auto reload if .vimrc is saved
 
 " set clipboard so we can copy/paste from system clipboard
-set clipboard=unnamedplus
+set clipboard=unnamed
 
 " set hidden allows leaving unwritten buffers
 set hidden

@@ -9,6 +9,5 @@ source $HOME/.vim/custom/session.vim
 source $HOME/.vim/custom/shortcuts.vim
 source $HOME/.vim/custom/visual.vim
 
-set clipboard=unnamedplus
+set clipboard=unnamed
 inoremap kj <Esc>
-
