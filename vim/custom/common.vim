@@ -23,3 +23,7 @@ set clipboard=unnamed
 
 " set hidden allows leaving unwritten buffers
 set hidden
+
+" set backspace so we can delete content not typed during the current session
+" http://stackoverflow.com/questions/3534028/mac-terminal-vim-will-only-use-backspace-when-at-the-end-of-a-line
+set backspace=indent,eol,start

@@ -41,12 +41,12 @@
   ignore = update-index --assume-unchanged
   unignore = update-index --no-assume-unchanged
   ignored = !git ls-files -v | grep "^[[:lower:]]"
-  l1 = log --graph --decorate --pretty=oneline --stat -1
-  l2 = log --graph --decorate --pretty=oneline --stat -2
-  l3 = log --graph --decorate --pretty=oneline --stat -3
-  l4 = log --graph --decorate --pretty=oneline --stat -4
-  l5 = log --graph --decorate --pretty=oneline --stat -5
-  l0 = log --graph --decorate --pretty=oneline --stat -10
+  l1 = log --graph --decorate --pretty=oneline --abbrev-commit --stat -1
+  l2 = log --graph --decorate --pretty=oneline --abbrev-commit --stat -2
+  l3 = log --graph --decorate --pretty=oneline --abbrev-commit --stat -3
+  l4 = log --graph --decorate --pretty=oneline --abbrev-commit --stat -4
+  l5 = log --graph --decorate --pretty=oneline --abbrev-commit --stat -5
+  l0 = log --graph --decorate --pretty=oneline --abbrev-commit --stat -10
 [merge]
   tool = vimdiff
 [mergetool]
