@@ -1,0 +1,29 @@
+# set prompt to show working directory
+export PS1="\w:$ "
+
+# set color for terminal
+export CLICOLOR=1
+
+# docker related additions
+export DOCKER_TLS_VERIFY=1
+export DOCKER_HOST=tcp://192.168.59.103:2376
+export DOCKER_CERT_PATH=/Users/hoofni/.boot2docker/certs/boot2docker-vm
+
+$(boot2docker shellinit)
+
+source /usr/local/share/chruby/chruby.sh
+source /usr/local/share/chruby/auto.sh
+
+# aliases
+alias ll="ls -lhAF"
+alias fucking="sudo"
+alias wtf="--help"
+alias be="bundle exec"
+alias bs="bin/spring"
+alias strip_gitst_first_col="cut -c4-"
+alias gitst_clean="git st --porcelain | strip_gitst_first_col"
+alias gwvim='vim $(gitst_clean)'
+alias ghvim='vim $(git df HEAD~1 | --name-only)'
+
+# run git completion script needed for tab completion
+. ~/.git-completion.bash
