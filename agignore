@@ -1,3 +1,6 @@
+# ignore git repo
+.git
+
 # rails projects
 gems.tags
 log/**
