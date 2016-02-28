@@ -40,6 +40,9 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'vim-scripts/align'
 Plugin 'slim-template/vim-slim'
 Plugin 'bling/vim-bufferline'
+Plugin 'thoughtbot/vim-rspec'
+Plugin 'jgdavey/tslime.vim'
+Plugin 'easymotion/vim-easymotion'
 
 " All of your Plugins must be added before the following line
 call vundle#end()          " required

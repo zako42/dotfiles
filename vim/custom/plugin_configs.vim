@@ -13,6 +13,7 @@ set tags+=gems.tags                                   " add gems.tags (generated
 " git gutter
 let g:gitgutter_sign_column_always = 1
 
+
 " setup CtrlP
 let g:ctrlp_working_path_mode = 'r'
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip
@@ -21,14 +22,32 @@ let g:ctrlp_custom_ignore = {
   \ 'file': '\v\.(exe|so|dll)$',
   \ }
 
+
+" vim-rspec config with tslime
+let g:rspec_command = 'call Send_to_Tmux("rspec {spec}\n")'
+map <Leader>t :call RunCurrentSpecFile()<CR>
+map <Leader>s :call RunNearestSpec()<CR>
+map <Leader>l :call RunLastSpec()<CR>
+map <Leader>a :call RunAllSpecs()<CR>
+let g:rspec_command = 'call Send_to_Tmux("bundle exec rspec {spec}\n")'
+
+
+" easymotion config
+let g:EasyMotion_do_mapping = 0 " Disable default mappings
+nmap s <Plug>(easymotion-overwin-f2)
+" Turn on case insensitive feature
+let g:EasyMotion_smartcase = 1
+" JK motions: Line motions
+map <Leader>j <Plug>(easymotion-j)
+map <Leader>k <Plug>(easymotion-k)
+
+
 " The Silver Searcher
 if executable('ag')
   " Use ag over grep
   set grepprg=ag\ --nogroup\ --nocolor\ --ignore-dir\ tags\ --ignore-dir\ log\ --ignore-dir\ gems.tags\ --ignore-dir\ tmp
-
   " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
   let g:ctrlp_user_command = 'ag %s -l --hidden --nocolor -g ""'
-
   " ag is fast enough that CtrlP doesn't need to cache
   let g:ctrlp_use_caching = 0
 endif
@@ -38,8 +57,8 @@ nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
 
 " bind \ (backward slash) to grep shortcut
 command -nargs=+ -complete=file -bar Ag silent! grep! --ignore gems.tags --ignore log --ignore tags --ignore tmp <args>|cwindow|redraw!
-
 nnoremap \ :Ag<SPACE>
+
 
 " setup startify bookmarks
 " let g:startify_bookmarks = [ '~/.vimrc', '~/.bashrc' ]
