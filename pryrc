@@ -1,8 +1,8 @@
 if defined?(PryByebug)
-  Pry.commands.alias_command 'c', 'continue'
-  Pry.commands.alias_command 's', 'step'
-  Pry.commands.alias_command 'n', 'next'
-  Pry.commands.alias_command 'f', 'finish'
+  Pry.commands.alias_command 'C', 'continue'
+  Pry.commands.alias_command 'S', 'step'
+  Pry.commands.alias_command 'N', 'next'
+  Pry.commands.alias_command 'F', 'finish'
 end
 
 # Hit Enter to repeat last command

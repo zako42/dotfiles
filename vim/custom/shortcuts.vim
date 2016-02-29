@@ -19,13 +19,17 @@ map <silent> ;ls :ls<CR>
 map <leader>d :execute 'NERDTreeFind'<CR>
 
 " CtrlP various search modes: open buffers, current dir, recent files
-nmap <leader>pb :CtrlPBuffer<CR>
+nmap <leader>P :CtrlPBuffer<CR>
 nmap <leader>pp :CtrlPMixed<CR>
 nmap <leader>pr :CtrlPMRU<CR>
 
 " relative and absolute rulers
 nmap <leader>rn :set rnu<CR>
-nmap <leader>an :set nu<CR>
+nmap <leader>an :set nornu<CR>
+
+" highlight searches on/off
+nmap <leader>h :set hlsearch<CR>
+nmap <leader>H :set nohlsearch<CR>
 
 " window navigation with ctrl
 nmap <C-J> <C-W>j
