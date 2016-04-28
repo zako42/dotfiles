@@ -19,9 +19,9 @@ map <silent> ;ls :ls<CR>
 map <leader>d :execute 'NERDTreeFind'<CR>
 
 " CtrlP various search modes: open buffers, current dir, recent files
-nmap <leader>P :CtrlPBuffer<CR>
-nmap <leader>pp :CtrlPMixed<CR>
-nmap <leader>pr :CtrlPMRU<CR>
+nmap <leader>B :CtrlPBuffer<CR>
+nmap <leader>P :CtrlPMixed<CR>
+nmap <leader>R :CtrlPMRU<CR>
 
 " relative and absolute rulers
 nmap <leader>rn :set rnu<CR>
