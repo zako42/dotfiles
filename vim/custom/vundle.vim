@@ -41,6 +41,8 @@ Plugin 'bling/vim-bufferline'
 Plugin 'thoughtbot/vim-rspec'
 Plugin 'jgdavey/tslime.vim'
 Plugin 'easymotion/vim-easymotion'
+Plugin 'kshenoy/vim-signature'
+Plugin 'vimwiki/vimwiki'
 
 " All of your Plugins must be added before the following line
 call vundle#end()          " required
