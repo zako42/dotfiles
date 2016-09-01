@@ -3,6 +3,7 @@ export PS1="\w:$ "
 
 # set color for terminal
 export CLICOLOR=1
+export EDITOR=vim
 
 # docker related additions
 # export DOCKER_TLS_VERIFY=1
@@ -25,6 +26,7 @@ alias gitst_clean="git st --porcelain | strip_gitst_first_col"
 alias gwvim='vim $(gitst_clean)'
 alias ghvim='vim $(git df HEAD~1 | --name-only)'
 alias start_redis='redis-server /usr/local/etc/redis.conf'
+alias vim='nvim'
 
 # run git completion script needed for tab completion
 . ~/.git-completion.bash
