@@ -3,8 +3,12 @@
 
 # rails projects
 gems.tags
-log/**
+tags
+schema.rb
 db/migrate/**
+log/**
+coverage/**
+.metadata
 tmp/**
 
 # for unity projects
