@@ -4,60 +4,58 @@
 " change working directory to that of file
 cmap cwd lcd %:p:h
 
+" source vimrc
+nnoremap <leader>sv :source $MYVIMRC<cr>
+
 " Remaps navigation respecting camelcase and underscores in words
-map <silent> w <Plug>CamelCaseMotion_w
-map <silent> b <Plug>CamelCaseMotion_b
-map <silent> e <Plug>CamelCaseMotion_e
+nmap <silent> w <Plug>CamelCaseMotion_w
+nmap <silent> b <Plug>CamelCaseMotion_b
+nmap <silent> e <Plug>CamelCaseMotion_e
 
 " close window with q
-map <silent> ;q :q<CR>
-map <silent> ;Q :q!<CR>
-map <silent> ;bd :bd<CR>
-map <silent> ;ls :ls<CR>
+nnoremap <silent> ;q :q<CR>
+nnoremap <silent> ;Q :q!<CR>
+nnoremap <silent> ;bd :bd<CR>
+nnoremap <silent> ;ls :ls<CR>
 
 " nerd tree
 " map <leader>d :execute 'NERDTreeFind'<CR>
 
 " CtrlP various search modes: open buffers, current dir, recent files
-nmap <leader>b :CtrlPBuffer<CR>
-nmap <leader>p :CtrlPMixed<CR>
-nmap <leader>r :CtrlPMRU<CR>
+nnoremap <leader>B :CtrlPBuffer<CR>
+nnoremap <leader>P :CtrlPMixed<CR>
+nnoremap <leader>R :CtrlPMRU<CR>
 
-" relative and absolute rulers
-nmap <leader>rn :set rnu<CR>
-nmap <leader>an :set nornu<CR>
+" map <leader>tl :execute 'TlistToggle'<CR>  " not sure what this does
 
-" highlight searches on/off
-nmap <leader>h :set hlsearch<CR>
-nmap <leader>H :set nohlsearch<CR>
+" toggle relative line numbers
+nnoremap <leader>rn :set rnu!<CR>
+
+" toggle highlight search
+nnoremap <silent> <leader>h :noh<CR>
 
 " window navigation with ctrl
-nmap <C-J> <C-W>j
-nmap <C-K> <C-W>k
-nmap <C-L> <C-W>l
-nmap <C-H> <C-W>h
+nnoremap <C-J> <C-W>j
+nnoremap <C-K> <C-W>k
+nnoremap <C-H> <C-W>h
+nnoremap <C-L> <C-W>l
 
-" tabbed navigation with ctrl (conflicts with window movement above)
+" tabbed, buffer navigation
 " nmap <C-H> gT
 " nmap <C-L> gt
+nnoremap <S-H> :bp<CR>
+nnoremap <S-L> :bn<CR>
+nnoremap <leader>bb :b#<CR>
 
-" buffer navigation with shift
-nmap <S-H> :bp<CR>
-nmap <S-L> :bn<CR>
-
-" current window split bigger
-" nmap <C-=> <ESC>:res +1
-
-" nnoremap <F5> :buffers<CR>:buffer<Space>
+" noremap <F5> :buffers<CR>:buffer<Space>  " use ctrl-p buffer
 
 " map global search replace
-nmap S :%s//g<LEFT><LEFT>
-vmap S :s//g<LEFT><LEFT>
+nnoremap S :%s//g<LEFT><LEFT>
+vnoremap S :s//g<LEFT><LEFT>
 
 " Session management
-nmap <F2> :mksession! ~/.vim_session <CR> " Quick write session with F2
-nmap <F3> :source ~/.vim_session <CR> " And load session with F3
-
+" nmap <F2> :mksession! ~/.vim_session <CR> " Quick write session with F2
+" nmap <F3> :source ~/.vim_session <CR> " And load session with F3
 
 " other shortcuts
 

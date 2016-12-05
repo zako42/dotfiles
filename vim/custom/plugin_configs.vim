@@ -1,5 +1,8 @@
 runtime! macros/matchit.vim                           " Find matching ( ), [ ], { } and def/end
 
+" let NERDTreeQuitOnOpen = 1                            " NERDTree config
+" let NERDTreeShowHidden = 1
+
 " indent guide config - assumes colorscheme passed from terminal
 let g:indent_guides_auto_colors = 0
 autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=black ctermbg=0
@@ -15,32 +18,13 @@ let g:gitgutter_sign_column_always = 1
 
 
 " setup CtrlP
+let g:ctrlp_switch_buffer = 'et'
 let g:ctrlp_working_path_mode = 'r'
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip
 let g:ctrlp_custom_ignore = {
   \ 'dir':  '\v[\/]\.(git|hg|svn)$',
   \ 'file': '\v\.(exe|so|dll)$',
   \ }
-
-
-" vim-rspec config with tslime
-let g:rspec_command = 'call Send_to_Tmux("rspec {spec}\n")'
-map <Leader>t :call RunCurrentSpecFile()<CR>
-map <Leader>s :call RunNearestSpec()<CR>
-map <Leader>l :call RunLastSpec()<CR>
-map <Leader>a :call RunAllSpecs()<CR>
-let g:rspec_command = 'call Send_to_Tmux("bundle exec rspec {spec}\n")'
-
-
-" easymotion config
-let g:EasyMotion_do_mapping = 0 " Disable default mappings
-nmap s <Plug>(easymotion-overwin-f2)
-" Turn on case insensitive feature
-let g:EasyMotion_smartcase = 1
-" JK motions: Line motions
-map <Leader>j <Plug>(easymotion-j)
-map <Leader>k <Plug>(easymotion-k)
-
 
 " The Silver Searcher
 if executable('ag')
@@ -59,21 +43,34 @@ nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
 command -nargs=+ -complete=file -bar Ag silent! grep! --ignore gems.tags --ignore log --ignore tags --ignore tmp <args>|cwindow|redraw!
 nnoremap \ :Ag<SPACE>
 
-
-" setup startify bookmarks
-" let g:startify_bookmarks = [ '~/.vimrc', '~/.bashrc' ]
-"
 " set git gutter to always leave the gutter open, to prevent shifting
 let g:gitgutter_sign_column_always = 1
 
+" set vim-signature to color marks based on gitgutter colors if overlapping
+let g:SignatureMarkTextHLDynamic = 1
+
 " set options for buftabline
-" let g:buftabline_numbers = 1
-" let g:buftabline_indicators = 1
-" let g:buftabline_separators = 1
+let g:buftabline_numbers = 1
+let g:buftabline_indicators = 1
+let g:buftabline_separators = 1
 
 " config bufferline
 let g:bufferline_echo = 0
 let g:bufferline_rotate = 0
+
+" RSpec.vim mappings
+nnoremap <Leader>t :call RunCurrentSpecFile()<CR>
+nnoremap <Leader>s :call RunNearestSpec()<CR>
+nnoremap <Leader>l :call RunLastSpec()<CR>
+nnoremap <Leader>a :call RunAllSpecs()<CR>
+let g:rspec_command = 'call Send_to_Tmux("bundle exec rspec {spec}\n")'
+
+" easymotion configs
+let g:EasyMotion_do_mapping = 0 " Disable default mappings
+let g:EasyMotion_smartcase = 1
+nmap s <Plug>(easymotion-overwin-f2)
+nmap <leader>j <Plug>(easymotion-j)
+nmap <leader>k <Plug>(easymotion-k)
 
 autocmd VimEnter *
   \ let &statusline='%{bufferline#refresh_status()}'

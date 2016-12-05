@@ -10,8 +10,8 @@ set notimeout
 set ttimeout
 set timeoutlen=50
 
-set backupdir=~/temp/vi_backup
-set directory=~/temp/vi_swap
+set backupdir=~/tmp/vi_backup
+set directory=~/tmp/vi_swap
 
 set splitbelow
 set splitright
@@ -19,7 +19,12 @@ set splitright
 autocmd! bufwritepost .vimrc source ~/.vimrc    " auto reload if .vimrc is saved
 
 " set clipboard so we can copy/paste from system clipboard
-set clipboard=unnamed
+" set clipboard=unnamed
+if has('nvim')
+  set clipboard+=unnamedplus
+else
+  set clipboard=unnamedplus
+endif
 
 " set hidden allows leaving unwritten buffers
 set hidden
