@@ -1,11 +1,18 @@
 {
   "workbench.colorTheme": "Solarized Dark",
+  "workbench.editor.enablePreview": false,
   "editor.codeLens": false,
   "editor.fontSize": 12,
-  "editor.tabSize": 2,
+  "editor.tabSize": 4,
+  "editor.insertSpaces": true,
+  "editor.detectIndentation": false,
   "editor.renderIndentGuides": false,
   "vim.leader": ",",
-  "vim.otherModesKeyBindingsNonRecursive": [
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["leader","s"],
+      "after": ["leader","leader","2","s"]
+    },
     {
       "before": ["H"],
       "after": ["g","T"]
@@ -21,7 +28,15 @@
       "after": ["<Esc>"]
     }
   ],
+  "vim.easymotion": true,
   "window.menuBarVisibility": "default",
   "editor.minimap.enabled": false,
-  "editor.renderWhitespace": "none"
+  "editor.renderWhitespace": "none",
+  "editor.renderControlCharacters": true,
+  "window.zoomLevel": 0,
+  "git.ignoreMissingGitWarning": true,
+  "workbench.startupEditor": "newUntitledFile",
+  "[csharp]": {},
+  "window.titleBarStyle": "custom",
+  "terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\wsl.exe"
 }
