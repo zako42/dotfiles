@@ -1,42 +1,119 @@
 {
-  "workbench.colorTheme": "Solarized Dark",
-  "workbench.editor.enablePreview": false,
-  "editor.codeLens": false,
-  "editor.fontSize": 12,
-  "editor.tabSize": 4,
-  "editor.insertSpaces": true,
-  "editor.detectIndentation": false,
-  "editor.renderIndentGuides": false,
-  "vim.leader": ",",
-  "vim.normalModeKeyBindingsNonRecursive": [
+    "workbench.colorTheme": "Solarized Dark",
+    "workbench.editor.enablePreview": false,
+    "editor.codeLens": false,
+    "editor.fontSize": 12,
+    "editor.tabSize": 4,
+    "editor.insertSpaces": true,
+    "editor.detectIndentation": false,
+    "editor.renderIndentGuides": false,
+    "vim.leader": ",",
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": ["leader","s"],
+            "after": ["leader","leader","2","s"]
+        },
+        {
+            "before": ["H"],
+            "after": ["g","T"]
+        },
+        {
+            "before": ["L"],
+            "after": ["g","t"]
+        }
+    ],
+    "vim.insertModeKeyBindings": [
+        {
+            "before": ["k","j"],
+            "after": ["<Esc>"]
+        }
+    ],
+    "vim.easymotion": true,
+    "window.menuBarVisibility": "default",
+    "editor.minimap.enabled": false,
+    "editor.renderWhitespace": "none",
+    "editor.renderControlCharacters": true,
+    "window.zoomLevel": 0,
+    "git.ignoreMissingGitWarning": true,
+    "workbench.startupEditor": "newUntitledFile",
+    "[csharp]": {},
+    "window.titleBarStyle": "custom",
+    // "terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\wsl.exe",
+    "terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\cmd.exe",
+    "python.pythonPath": "D:\\Anaconda3\\envs\\ml-agents\\python.exe",
+    "python.linting.pylintEnabled": true,
+    "python.linting.enabled": true,
+
+    "files.exclude":
+    // added for Unity3d projects, due to all the media, binary files, etc
     {
-      "before": ["leader","s"],
-      "after": ["leader","leader","2","s"]
-    },
-    {
-      "before": ["H"],
-      "after": ["g","T"]
-    },
-    {
-      "before": ["L"],
-      "after": ["g","t"]
+        "**/.DS_Store":true,
+        "**/.git":true,
+        "**/.gitignore":true,
+        "**/.gitmodules":true,
+        "**/*.booproj":true,
+        "**/*.pidb":true,
+        "**/*.suo":true,
+        "**/*.user":true,
+        "**/*.userprefs":true,
+        "**/*.unityproj":true,
+        "**/*.dll":true,
+        "**/*.exe":true,
+        "**/*.pdf":true,
+        "**/*.mid":true,
+        "**/*.midi":true,
+        "**/*.wav":true,
+        "**/*.gif":true,
+        "**/*.ico":true,
+        "**/*.jpg":true,
+        "**/*.jpeg":true,
+        "**/*.png":true,
+        "**/*.psd":true,
+        "**/*.tga":true,
+        "**/*.tif":true,
+        "**/*.tiff":true,
+        "**/*.3ds":true,
+        "**/*.3DS":true,
+        "**/*.fbx":true,
+        "**/*.FBX":true,
+        "**/*.lxo":true,
+        "**/*.LXO":true,
+        "**/*.ma":true,
+        "**/*.MA":true,
+        "**/*.obj":true,
+        "**/*.OBJ":true,
+        "**/*.asset":true,
+        "**/*.cubemap":true,
+        "**/*.flare":true,
+        "**/*.mat":true,
+        "**/*.meta":true,
+        "**/*.prefab":true,
+        "**/*.unity":true,
+        "build/":true,
+        "Build/":true,
+        "Library/":true,
+        "library/":true,
+        "obj/":true,
+        "Obj/":true,
+        "ProjectSettings/":true,
+        "temp/":true,
+        "Temp/":true,
+        "Assets/JavaScript/":true,
+        "Assets/Materials/":true,
+        "Assets/Models/":true,
+        "Assets/Models2/":true,
+        "Assets/NavMeshData/":true,
+        "Assets/OutlineEffect/":true,
+        "Assets/Prefabs/":true,
+        "Assets/Resources/":true,
+        "Assets/RunTimePrefab/":true,
+        "Assets/ScriptableObjects/":true,
+        "Assets/Scenes/":true,
+        "Assets/Textures/":true,
+        "Executables/":true,
+        "UnityPackageManager/":true,
+        "*.unitypackage":true,
+        "Assets/Mapbox/**": true,
+        "Assets/NavMeshComponents/**": true
     }
-  ],
-  "vim.insertModeKeyBindings": [
-    {
-      "before": ["k","j"],
-      "after": ["<Esc>"]
-    }
-  ],
-  "vim.easymotion": true,
-  "window.menuBarVisibility": "default",
-  "editor.minimap.enabled": false,
-  "editor.renderWhitespace": "none",
-  "editor.renderControlCharacters": true,
-  "window.zoomLevel": 0,
-  "git.ignoreMissingGitWarning": true,
-  "workbench.startupEditor": "newUntitledFile",
-  "[csharp]": {},
-  "window.titleBarStyle": "custom",
-  "terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\wsl.exe"
 }
